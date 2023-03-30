@@ -12,7 +12,7 @@ def hello_kpfu():
 
 @app.route("/kpfu-top")
 def hello_kpfu_2():
-   return "Hello, students from KPFU fjdksfgjksdj"
+   return "Hello everyone, students from KPFU fjdksfgjksdj"
 
 if __name__ == '__main__':
    app.run(port=5000, debug=True) # application will start listening for web request on port 5000
