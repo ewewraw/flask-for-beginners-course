@@ -9,6 +9,8 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
+    display: flex !important;
+    justify-content: center;
 }
 
 h1 {
