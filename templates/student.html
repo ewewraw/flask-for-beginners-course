@@ -1,0 +1,21 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="m-5 p-5 d-flex flex-column justify-content-center align-items-center">
+    <h1 class="my-2">This is a personal page about <strong>{{ name.capitalize() }} </strong></h1>
+    <h3 class="my-1">Just look how {{ characteristics[0] }} {{ gender }} is:</h3>
+    <img class="img-thumbnail my-1" style="max-width: 30vw" src="{{ photo }}">
+    <h3 class="my-1">{{ gender }} is also:</h3>
+    <ul>
+        {% for i in range(1, characteristics|length) %}
+                <li>
+                  {{characteristics[i]}}
+                </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
