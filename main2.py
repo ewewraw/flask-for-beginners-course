@@ -13,7 +13,7 @@ def main_page():
     # What kind of object is that? What is inside?
     # Maybe you can print it and have a look?
     # TODO: Main task: 1) make everything translatable 2) add another language (any)
-    return render_template('portfolio.html', translations=languages.get('en_EN'))
+    return render_template('portfolio.html', translations=languages.get('ru_RU'))
 
 @app.route('/dummy_function')
 def dummy_function():
