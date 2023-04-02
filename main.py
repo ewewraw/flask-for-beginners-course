@@ -8,7 +8,7 @@ def hello():
 
 @app.route("/kpfu")
 def hello_kpfu():
-   return "Hello, students from KPFU"
+   return "Hello, ppl from KPFU"
 
 @app.route("/kpfu-top")
 def hello_kpfu_2():
