@@ -7,7 +7,7 @@ def main_page(name=None, characteristics=['cool', 'nice'], photo="/static/harold
     # Here you should complete your code
     if name == "natalia":
         gender = 'she'
-        characteristics = ['god damn awsome', 'a programming tutor', 'thinking if she should do a master at TUM']
+        characteristics = ['god damn awsome', 'a programming tutor', 'thinking if she should do a master at TUM', "smart"]
         photo ="/static/natalia.png"
     else:
         print('here you should add info about you')
