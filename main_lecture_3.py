@@ -11,6 +11,7 @@ def main_page(name=None, characteristics=['cool', 'nice'], photo="/static/harold
         photo ="/static/natalia.png"
     else:
         print('student 1')
+        print('student 2')
         print('Ive changed smth')
 
     return render_template('student.html', name=name, gender=gender, characteristics=characteristics, photo=photo)
