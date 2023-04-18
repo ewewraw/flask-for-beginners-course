@@ -52,4 +52,4 @@ if __name__ == '__main__':
             languages[lang_code] = json.loads(file.read())
     # TODO: So, how will the languages array look like in the end? Let's try to print it and see the console logs...
 
-    app.run(port=5000, debug=True)  # application will start listening for web request on port 5000
+    app.run(host="0.0.0.0", port=8080, debug=True)  # application will start listening for web request on port 5000

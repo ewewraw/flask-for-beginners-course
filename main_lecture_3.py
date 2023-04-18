@@ -15,4 +15,4 @@ def main_page(name=None, characteristics=['cool', 'nice'], photo="/static/harold
     return render_template('student.html', name=name, gender=gender, characteristics=characteristics, photo=photo)
 
 if __name__ == '__main__':
-   app.run(port=5000, debug=True)
+   app.run(host="0.0.0.0", port=8080, debug=True)
