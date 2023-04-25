@@ -41,9 +41,7 @@ if __name__ == '__main__':
     locale.setlocale(locale.LC_ALL, app_language)
     languages = {}
     # TODO: so we just took all the files that are in the language directory? Hmm..
-    language_list = [f for f in listdir('./language/') if isfile(join('./language/', f))]
-    print('this is your folder:')
-    print(listdir('./language/'))
+    language_list = [f for f in listdir(os.path.join(".", 'language')) if isfile(join('./language/', f))]
     # TODO: And for each file... ?
     for lang in language_list:
         # TODO: we extract the language code from the file name...
