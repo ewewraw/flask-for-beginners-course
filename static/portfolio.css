@@ -1,37 +1,43 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: helvetica;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #303F9F;
+    color: #303F9F;
     text-align: center;
     padding: 20px;
 }
 
 h1 {
     margin: 0;
-    color: #FD9F9F;
+    color: #FFFFFF;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #3F51B5;
+}
+
+footer {
+    background-color: #3F51B5;
+    color: #3F51B5;
+    text-align: center;
+    padding: 50px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 4fr 1fr 1fr 4fr;
-    grid-template-rows: 1fr repeat(2, 1fr) repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
     "name name name name"
     "working-experience picture picture education"
-    "projects picture picture certificates"
-    "scholarships picture picture volunteering"
-    "hobbies hobbies hobbies hobbies";
+    "hobbies picture picture volunteering";
 }
 
 .picture {
@@ -52,19 +58,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f1f1f1;
+    background-color: #3F51B5;
     padding: 20px;
     text-align: center;
 }
 
 .categories a {
-    color: #333;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
+    font-size: larger;
 }
 
 .categories a:hover {
-    color: #555;
+    color: #BDBDBD;
 }
 
 .education {
@@ -79,18 +86,6 @@ main {
     grid-area: volunteering;
 }
 
-.projects {
-    grid-area: projects;
-}
-
-.scholarships {
-    grid-area: scholarships;
-}
-
-.certificates {
-    grid-area: certificates;
-}
-
 .hobbies {
     grid-area: hobbies;
 }
@@ -98,3 +93,10 @@ main {
 .name {
     grid-area: name;
 }
+
+form {
+    margin: 0 auto;
+    max-width: 30%;
+    padding: 30px 30px 6px 30px;
+    background-color: #BDBDBD;
+    border: 10px solid #BDBDBD
