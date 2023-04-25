@@ -9,6 +9,10 @@ def main_page(name=None, characteristics=['cool', 'nice'], photo="/static/harold
         gender = 'she'
         characteristics = ['god damn awsome', 'a programming tutor', 'thinking if she should do a master at TUM', "smart"]
         photo ="/static/natalia.png"
+    elif name == "alex":
+         gender = 'she'
+         characteristics = ['too lazy', 'bad at programming', 'mbti - infj]
+         photo = "/static/alex.jpg"
     else:
         print('student 1')
         print('student 2')
