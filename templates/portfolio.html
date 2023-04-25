@@ -13,10 +13,12 @@
 {#    TODO: style the buttons and implement language change #}
         <div class="d-flex justify-items-center">
 {#    TODO: what is this weird form? Where does it lead? what happens when I click this button? Maybe console logs can help me... #}
-            <form action="/dummy_function" method="get">
+            <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="ru" />
                 <button class="m-1">RU</button>
             </form>
-            <form>
+            <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="en" />
                 <button class="m-1">EN</button>
             </form>
         </div>

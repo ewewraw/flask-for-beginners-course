@@ -1,6 +1,5 @@
-from flask import Flask, render_template, redirect, url_for  # include the flask library
+from flask import Flask, render_template, redirect, url_for, request  # include the flask library
 import locale
-import glob
 import json
 import os
 from os import listdir
@@ -8,9 +7,11 @@ from os.path import isfile, join
 
 app = Flask(__name__)
 
+# app_language = 'en_EN'
 
 @app.route('/portfolio')
 def main_page():
+    # global app_language
     # TODO
     # Look at the translations argument. How does it look like?
     # What kind of object is that? What is inside?
@@ -18,12 +19,20 @@ def main_page():
     # TODO: Main task: 1) make everything translatable 2) add another language (any)
     return render_template('portfolio.html', translations=languages.get('en_EN'))
 
-@app.route('/dummy_function')
+@app.route('/dummy_function', methods = ['POST'])
 def dummy_function():
+    # global app_language
     # TODO
     # what is this weird function?
+    lang = request.form['lang']
     print('Oh myyyy')
-    return redirect(url_for('main_page'))
+    print(lang)
+    if lang == 'en':
+        # app_language = 'en_EN'
+        return render_template('portfolio.html', translations=languages.get('en_EN'))
+    else:
+        # app_language = 'ru_RU'
+        return render_template('portfolio.html', translations=languages.get('ru_RU'))
 
 @app.route('/random')
 def random_page():
@@ -41,7 +50,7 @@ if __name__ == '__main__':
     locale.setlocale(locale.LC_ALL, app_language)
     languages = {}
     # TODO: so we just took all the files that are in the language directory? Hmm..
-    language_list = [f for f in listdir(os.path.join(".", 'language')) if isfile(join('./language/', f))]
+    language_list = [f for f in listdir(os.path.join(".", 'language')) if isfile(join(os.path.join(".", 'language'), f))]
     # TODO: And for each file... ?
     for lang in language_list:
         # TODO: we extract the language code from the file name...
