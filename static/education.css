@@ -1,0 +1,78 @@
+body {
+    font-family: helvetica;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #303F9F;
+    color: #303F9F;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #3F51B5;
+    color: #3F51B5;
+    text-align: center;
+    padding: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 4fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas:
+    "name name name name"
+    "working-experience picture picture education"
+    "hobbies picture picture volunteering";
+}
+
+.picture {
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.picture img {
+    max-width: 250%;
+    height: auto;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3F51B5;
+    padding: 20px;
+    text-align: center;
+}
+
+.categories a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.categories a:hover {
+    color: #BDBDBD;
+}
+
+.name {
+    grid-area: name;
+}
