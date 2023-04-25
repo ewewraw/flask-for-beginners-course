@@ -41,7 +41,7 @@ if __name__ == '__main__':
     language_list = glob.glob("./language/*.json")
     # TODO: And for each file... ?
     for lang in language_list:
-        filename = lang.split('/')
+        filename = lang.split('//')
         # TODO: we extract the language code from the file name...
         lang_code = filename[2].split('.')[0]
         # TODO: and look inside the file
