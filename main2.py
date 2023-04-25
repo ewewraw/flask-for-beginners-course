@@ -17,7 +17,7 @@ def main_page():
     # What kind of object is that? What is inside?
     # Maybe you can print it and have a look?
     # TODO: Main task: 1) make everything translatable 2) add another language (any)
-    return render_template('portfolio.html', translations=languages.get('en_EN'))
+    return render_template('portfolio.html', translations=languages.get('ru_RU'))
 
 @app.route('/dummy_function', methods = ['POST'])
 def dummy_function():
@@ -27,12 +27,11 @@ def dummy_function():
     lang = request.form['lang']
     print('Oh myyyy')
     print(lang)
+    print("button clicked")
     if lang == 'en':
-        # app_language = 'en_EN'
         return render_template('portfolio.html', translations=languages.get('en_EN'))
     else:
-        # app_language = 'ru_RU'
-        return render_template('portfolio.html', translations=languages.get('ru_RU'))
+        return render_template('portfolio.html', translations=languages.get('en_EN'))
 
 @app.route('/random')
 def random_page():
@@ -51,6 +50,7 @@ if __name__ == '__main__':
     languages = {}
     # TODO: so we just took all the files that are in the language directory? Hmm..
     language_list = [f for f in listdir(os.path.join(".", 'language')) if isfile(join(os.path.join(".", 'language'), f))]
+    # ["en_EN.json", "ru_RU.json"]
     # TODO: And for each file... ?
     for lang in language_list:
         # TODO: we extract the language code from the file name...

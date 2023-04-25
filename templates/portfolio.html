@@ -18,7 +18,6 @@
                 <button class="m-1">RU</button>
             </form>
             <form action="/dummy_function" method="post">
-                <input type="hidden" name="lang" value="en" />
                 <button class="m-1">EN</button>
             </form>
         </div>
@@ -30,7 +29,7 @@
             <h1>Artem Pain</h1>
         </div>
         <div class="education categories">
-            <a href="#">Education</a>
+            <a href="#">{{ translations.get('education') }}</a>
         </div>
         <div class="working-experience categories">
             <a href="#">Working Experience</a>
