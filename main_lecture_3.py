@@ -11,8 +11,8 @@ def main_page(name=None, characteristics=['cool', 'nice'], photo="/static/harold
         photo ="/static/natalia.png"
     elif name == "alex":
          gender = 'she'
-         characteristics = ['too lazy', 'bad at programming', 'mbti - infj]
-         photo = "/static/alex.jpg"
+         characteristics = ['happy (when she has free time)', 'bad at programming', 'mbti - infj']
+         photo ="/static/alex.jpg"
     else:
         print('student 1')
         print('student 2')
