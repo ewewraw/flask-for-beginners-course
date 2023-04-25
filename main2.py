@@ -42,12 +42,14 @@ if __name__ == '__main__':
     languages = {}
     # TODO: so we just took all the files that are in the language directory? Hmm..
     language_list = [f for f in listdir('./language/') if isfile(join('./language/', f))]
+    print('this is your folder:')
+    print(listdir('./language/'))
     # TODO: And for each file... ?
     for lang in language_list:
         # TODO: we extract the language code from the file name...
         lang_code = lang.split('.')[0]
         # TODO: and look inside the file
-        with open('./language/' + lang, 'r', encoding='utf8') as file:
+        with open(os.path.join(".", 'language', lang), 'r', encoding='utf8') as file:
             # TODO: and for our languages array we add the content of each file under the language code. Hmm...
             languages[lang_code] = json.loads(file.read())
     # TODO: So, how will the languages array look like in the end? Let's try to print it and see the console logs...
