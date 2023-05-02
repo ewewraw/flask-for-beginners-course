@@ -4,6 +4,7 @@ import json
 import os
 from os import listdir
 from os.path import isfile, join
+# to install this package run pip (or pip3) install Flask-Mail
 from flask_mail import Mail, Message
 import os
 
