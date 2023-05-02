@@ -4,8 +4,24 @@ import json
 import os
 from os import listdir
 from os.path import isfile, join
+from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+# TODO: replace with your email
+app.config['MAIL_USERNAME'] = os.getenv("FROM_EMAIL")
+# TODO:
+# The following line should contain a password set in app passwords ion your google account.
+# The password itself should be stored in .env file. DO NOT PUSH YOUR .env FILE TO GIT!!!
+# Look at the example in .dummy-env. This is how your .env should look like
+app.config['MAIL_PASSWORD'] = os.getenv("EMAIL_PASSWORD")
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail = Mail(app)
 
 # app_language = 'en_EN'
 
@@ -36,6 +52,13 @@ def dummy_function():
 @app.route('/random')
 def random_page():
     return render_template('index.html')
+
+@app.route("/send-test-email")
+def index():
+    msg = Message('Damn it really works!', sender = 'ewewraw@gmail.com', recipients = ['natalia.markoborodova@mailbox.tu-dresden.de'])
+    msg.body = "Hey dude, sending you this email from my Flask app, lmk if it works"
+    mail.send(msg)
+    return "Message sent!"
 
 def get_stats(input):
     return locale.format_string('%d', input)
