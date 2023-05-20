@@ -4,13 +4,14 @@ import json
 import os
 from os import listdir
 from os.path import isfile, join
-# to install this package run pip (or pip3) install Flask-Mail
+
+#pip install Flask-Mail
 from flask_mail import Mail, Message
 import os
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_SERVER'] = '23angel18.gmail.com'
 app.config['MAIL_PORT'] = 465
 # TODO: replace with your email
 app.config['MAIL_USERNAME'] = os.getenv("FROM_EMAIL")
@@ -24,17 +25,25 @@ app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
 
-# app_language = 'en_EN'
+app_language = 'en_EN'
 
 @app.route('/portfolio')
 def main_page():
-    # global app_language
+    global app_language
     # TODO
     # Look at the translations argument. How does it look like?
     # What kind of object is that? What is inside?
     # Maybe you can print it and have a look?
     # TODO: Main task: 1) make everything translatable 2) add another language (any)
     return render_template('portfolio.html', translations=languages.get('ru_RU'))
+
+@app.route('/work')
+def work():
+    return render_template('work.html', translations=languages.get('ru_RU'))
+
+@app.route('/education')
+def education():
+    return render_template('education.html', translations=languages.get('ru_RU'))
 
 @app.route('/dummy_function', methods = ['POST'])
 def dummy_function():
@@ -50,13 +59,26 @@ def dummy_function():
     else:
         return render_template('portfolio.html', translations=languages.get('en_EN'))
 
-@app.route('/random')
-def random_page():
-    return render_template('index.html')
+@app.route('/volunteering_categories')
+def volunteering_categories():
+    return render_template('volunteering.html')
+
+@app.route('/projects_categories')
+def projects_categories():
+    return render_template('projects.html')
+
+@app.route('/certificates_categories')
+def certificates_categories():
+    return render_template('certificates.html')
+
+@app.route('/scholarships_categories')
+def scholarships_categories():
+    return render_template('scholarships.html')
+
 
 @app.route("/send-test-email")
 def index():
-    msg = Message('Damn it really works!', sender = 'ewewraw@gmail.com', recipients = ['natalia.markoborodova@mailbox.tu-dresden.de'])
+    msg = Message('Damn it really works!', sender = '23angel18@gmail.com', recipients = ['23angel18@gmail.com'])
     msg.body = "Hey dude, sending you this email from my Flask app, lmk if it works"
     mail.send(msg)
     return "Message sent!"

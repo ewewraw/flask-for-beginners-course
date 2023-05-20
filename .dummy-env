@@ -1,4 +1,0 @@
-# This file is git ignored. Here you can store your passwords.
-# DO NOT PUSH THE FILE because you don't want to expose your passwords!!!
-FROM_EMAIL=<add your email here, without the triangle brackets :)>
-EMAIL_PASSWORD=<add your password here, without the triangle brackets :)>
