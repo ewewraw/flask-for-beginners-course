@@ -1,5 +1,11 @@
 {
-  "my_portfolio": "Мое Портфолио",
-    "education": "Оьразование"
+   "education": "Образование",
+    "working_experience": "Опыт работы",
+    "interests": "Интересы",
+    "projects": "Проекты",
+    "languages": "Языки",
+    "certificates": "Сертификаты",
+    "hobbies": "Хобби",
+    "my_portfolio": "Моё портфолио"
 
 }

@@ -1,4 +1,10 @@
 {
-  "my_portfolio": "My Portfolio",
-  "education": "Education"
+   "education": "Education",
+    "working_experience": "Working Experience",
+    "interests": "Interests",
+    "projects": "Projects",
+    "languages": "Languages",
+    "certificates": "Certificates",
+    "hobbies": "Hobbies",
+    "my_portfolio": "My Portfolio"
 }

@@ -1,58 +1,62 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
-    <title>MY UNIVERSITY</title>
-    <link rel="stylesheet" type="text/css" href="../static/portfolio.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+  <title>My Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="../static/portfolio.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 <header>
     <div class="d-flex w-75 justify-content-around">
-        <h1>{{ translations.get('my_portfolio') }}</h1>
-{#    TODO: style the buttons and implement language change #}
+        <h1>{{ translations.my_portfolio }}</h1>
         <div class="d-flex justify-items-center">
-{#    TODO: what is this weird form? Where does it lead? what happens when I click this button? Maybe console logs can help me... #}
-            <form action="/dummy_function" method="post">
-                <input type="hidden" name="lang" value="ru" />
+             <form action="{{ url_for('change_language') }}" method="POST">
+                <input type="hidden" name="lang" value="en"/>
+                <button class="m-1">EN</button>
+            </form>
+             <form action="{{ url_for('change_language') }}" method="POST">
+                <input type="hidden" name="lang" value="ru"/>
                 <button class="m-1">RU</button>
             </form>
-            <form action="/dummy_function" method="post">
-                <button class="m-1">EN</button>
+            <form action="{{ url_for('change_language') }}" method="POST">
+    <input type="hidden" name="lang" value="es">
+    <button class="m-1">ES</button>
             </form>
         </div>
     </div>
 </header>
 <main>
-    <div class="grid-container">
-        <div class="name categories">
-            <h1>Artem Pain</h1>
-        </div>
-        <div class="education categories">
-            <a href="#">{{ translations.get('education') }}</a>
-        </div>
-        <div class="working-experience categories">
-            <a href="#">Working Experience</a>
-        </div>
-        <div class="volunteering categories">
-            <a href="/random">Volunteering Activity</a>
-        </div>
-        <div class="projects categories">
-            <a href="#">Projects</a>
-        </div>
-        <div class="scholarships categories">
-            <a href="https://github.com/ewewraw/flask-for-beginners-course/blob/master/main2.py">Scholarships</a>
-        </div>
-        <div class="certificates categories">
-            <a href="#">Certificates</a>
-        </div>
-        <div class="picture">
-            <img src="../static/harold.webp" alt="Profile Picture">
-        </div>
-        <div class="hobbies categories">
-            <a href="#">Hobbies</a>
-        </div>
+  <div class="grid-container">
+    <div class="name categories">
+      <h1>Gulnaz</h1>
     </div>
+    <div class="education categories">
+      <a href="http://localhost:63342/flask-for-beginners-course/templates/education.html?_ijt=7gk1jfvoqsv9pr31l3dk5puog1&_ij_reload=RELOAD_ON_SAVE">{{ translations.education }}</a>
+    </div>
+    <div class="working-experience categories">
+      <a href="http://localhost:63342/flask-for-beginners-course/templates/workingexperience.html?_ijt=1of8gd9e9r0t627ouum6scfllj&_ij_reload=RELOAD_ON_SAVE">{{ translations.working_experience }}</a>
+    </div>
+    <div class="interests categories">
+      <a href="http://localhost:63342/flask-for-beginners-course/templates/interests.html?_ijt=9vpnffrm2jj31shvdp6uigjd3j&_ij_reload=RELOAD_ON_SAVE">{{ translations.interests }}</a>
+    </div>
+    <div class="projects categories">
+      <a href="#">{{ translations.projects }}</a>
+    </div>
+    <div class="languages categories">
+      <a href="http://localhost:63342/flask-for-beginners-course/templates/languages.html?_ijt=4inp72fhtnjl0j5majnjbt1ual&_ij_reload=RELOAD_ON_SAVE">{{ translations.languages }}</a>
+    </div>
+    <div class="certificates categories">
+      <a href="#">{{ translations.certificates }}</a>
+    </div>
+    <div class="picture">
+      <img src="../static/gulnaz.jpg" alt="Profile Picture">
+    </div>
+    <div class="hobbies categories">
+      <a href="#">{{ translations.hobbies }}</a>
+    </div>
+  </div>
 </main>
 </body>
 </html>
+
