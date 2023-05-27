@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 # TODO: replace with your email
-app.config['MAIL_USERNAME'] = os.getenv("FROM_EMAIL")
+app.config['MAIL_USERNAME'] = os.getenv("FROM_EMAIL")#вручную написать эмейл
 # TODO:
 # The following line should contain a password set in app passwords ion your google account.
 # The password itself should be stored in .env file. DO NOT PUSH YOUR .env FILE TO GIT!!!
@@ -24,7 +24,7 @@ app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
 
-# app_language = 'en_EN'
+app_language = 'en_EN'
 
 @app.route('/portfolio')
 def main_page():
@@ -34,11 +34,11 @@ def main_page():
     # What kind of object is that? What is inside?
     # Maybe you can print it and have a look?
     # TODO: Main task: 1) make everything translatable 2) add another language (any)
-    return render_template('portfolio.html', translations=languages.get('ru_RU'))
+    return render_template('portfolio.html', translations=languages.get(app_language))
 
 @app.route('/dummy_function', methods = ['POST'])
 def dummy_function():
-    # global app_language
+    global app_language
     # TODO
     # what is this weird function?
     lang = request.form['lang']
@@ -46,20 +46,27 @@ def dummy_function():
     print(lang)
     print("button clicked")
     if lang == 'en':
-        return render_template('portfolio.html', translations=languages.get('en_EN'))
+        app_language = 'en_EN'
+        return render_template('portfolio.html', translations=languages.get(app_language))
+    elif lang == 'ru':
+        app_language = 'ru_RU'
+        return render_template('portfolio.html', translations=languages.get(app_language))
     else:
-        return render_template('portfolio.html', translations=languages.get('en_EN'))
-
+        app_language = 'jp_JP'
+        return render_template('portfolio.html', translations=languages.get(app_language))
 @app.route('/random')
 def random_page():
     return render_template('index.html')
 
-@app.route("/send-test-email")
+@app.route("/send-test-email", methods = ['POST'])
 def index():
-    msg = Message('Damn it really works!', sender = 'ewewraw@gmail.com', recipients = ['natalia.markoborodova@mailbox.tu-dresden.de'])
-    msg.body = "Hey dude, sending you this email from my Flask app, lmk if it works"
+    firstname = request.form['firstname']
+    lastname = request.form['lastname']
+    message = request.form['message']
+    msg = Message('New email from' + ' ' + firstname +' ' + lastname, sender = 'ryabets.alexandra@gmail.com', recipients = ['alexandra.ryabets@mail.ru'])
+    msg.body = request.form['message']
     mail.send(msg)
-    return "Message sent!"
+    return "Your message is sent!"
 
 def get_stats(input):
     return locale.format_string('%d', input)

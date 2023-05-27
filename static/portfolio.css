@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #008B8B;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -13,7 +13,7 @@ header {
 
 h1 {
     margin: 0;
-    color: #FD9F9F;
+    color: #2F4F4F;
 }
 
 main {
@@ -52,19 +52,19 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f1f1f1;
+    background-color: #66CDAA;
     padding: 20px;
     text-align: center;
 }
 
 .categories a {
-    color: #333;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
 
 .categories a:hover {
-    color: #555;
+    color: #000000;
 }
 
 .education {
@@ -100,4 +100,30 @@ main {
 }
 .some-class {
 
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }

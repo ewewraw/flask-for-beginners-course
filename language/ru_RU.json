@@ -1,5 +1,11 @@
 {
+  "name": "Александра Рябец",
   "my_portfolio": "Мое Портфолио",
-    "education": "Оьразование"
-
+  "education": "Образование",
+  "working_exp": "Опыт работы",
+  "volunteering": "Волонтерская деятельность",
+  "projects": "Проекты",
+  "scholarship": "Стипендия",
+  "certificates": "Сертификаты",
+  "hobbies": "Хобби"
 }

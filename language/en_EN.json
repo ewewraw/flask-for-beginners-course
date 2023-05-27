@@ -1,4 +1,11 @@
 {
+  "name": "Alexandra Ryabets",
   "my_portfolio": "My Portfolio",
-  "education": "Education"
+  "education": "Education",
+  "working_exp": "Working Experience",
+  "volunteering": "Volunteering",
+  "projects": "Projects",
+  "scholarship": "Scholarship",
+  "certificates": "Certificates",
+  "hobbies": "Hobbies"
 }

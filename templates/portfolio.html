@@ -18,7 +18,12 @@
                 <button class="m-1">RU</button>
             </form>
             <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="en" />
                 <button class="m-1">EN</button>
+            </form>
+             <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="jp" />
+                <button class="m-1">JP</button>
             </form>
         </div>
     </div>
@@ -26,33 +31,51 @@
 <main>
     <div class="grid-container">
         <div class="name categories">
-            <h1>Artem Pain</h1>
+            <h1> Alexandra Ryabets </h1>
         </div>
         <div class="education categories">
             <a href="#">{{ translations.get('education') }}</a>
         </div>
         <div class="working-experience categories">
-            <a href="#">Working Experience</a>
+            <a href="#">{{ translations.get('working_exp') }}</a>
         </div>
         <div class="volunteering categories">
-            <a href="/random">Volunteering Activity</a>
+            <a href="/random">{{ translations.get('volunteering') }}</a>
         </div>
         <div class="projects categories">
-            <a href="#">Projects</a>
+            <a href="#">{{ translations.get('projects') }}</a>
         </div>
         <div class="scholarships categories">
-            <a href="https://github.com/ewewraw/flask-for-beginners-course/blob/master/main2.py">Scholarships</a>
+            <a href="https://github.com/ewewraw/flask-for-beginners-course/blob/master/main2.py">{{ translations.get('scholarship') }}</a>
         </div>
         <div class="certificates categories">
-            <a href="#">Certificates</a>
+            <a href="#">{{ translations.get('certificates') }}</a>
         </div>
         <div class="picture">
-            <img src="../static/harold.webp" alt="Profile Picture">
+            <img src="../static/alex.jpeg" alt="Profile Picture">
         </div>
         <div class="hobbies categories">
-            <a href="#">Hobbies</a>
+            <a href="#">{{ translations.get('hobbies') }}</a>
         </div>
     </div>
+    <div class="container">
+  <form action="/send-test-email" method="POST">
+
+<!--    <label for="fname">First Name</label>-->
+    <input type="text" name="firstname" placeholder="Your name.."/>
+
+<!--    <label for="lname">Last Name</label>-->
+    <input type="text" name="lastname" placeholder="Your last name.."/>
+
+<!--    <label for="message">Your message</label>-->
+    <input type='text'  name="message" placeholder="Write something.." style="height:200px"/>
+
+    <input type='text' name="email" placeholder="Write your e-mail ..."/>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
 </main>
 </body>
 </html>
