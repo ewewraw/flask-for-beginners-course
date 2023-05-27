@@ -60,14 +60,12 @@ def send_email():
                   recipients=[request.form['email']])
     msg.body = languages.get(app_language).get('letter_subject')
     mail.send(msg)
-    print(msg)
 
     msg = Message('Новое сообщение с твоего сайта', sender=os.getenv("FROM_EMAIL"),
                   recipients=['shakirova.gul2015@yandex.ru'])
     msg.body = 'Вам написал ' + request.form['lastname'] + ' ' + request.form['firstname'] + ' ' \
                + request.form['email'] + '\n' + request.form['subject']
     mail.send(msg)
-    print(msg)
 
     return render_template('portfolio.html', translations=languages.get(app_language))
 
