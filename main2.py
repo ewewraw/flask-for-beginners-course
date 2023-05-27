@@ -94,4 +94,4 @@ if __name__ == '__main__':
         with open(os.path.join(".", 'language', lang), 'r', encoding='utf8') as file:
             languages[lang_code] = json.loads(file.read())
 
-    app.run(host="0.0.0.0", port=8080, debug=True)  # application will start listening for web request on port 5000
+    app.run()  # application will start listening for web request on port 5000
