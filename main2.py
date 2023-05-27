@@ -1,11 +1,8 @@
- # include the flask library
-from flask import Flask, render_template, redirect, url_for, request, session  # include the flask library
+from flask import Flask, render_template, request
 import locale
 import json
-import os
 from os import listdir
 from os.path import isfile, join
-# to install this package run pip (or pip3) install Flask-Mail
 from flask_mail import Mail, Message
 import os
 app = Flask(__name__)
@@ -67,7 +64,8 @@ def send_email():
 
     msg = Message('Новое сообщение с твоего сайта', sender=os.getenv("FROM_EMAIL"),
                   recipients=['shakirova.gul2015@yandex.ru'])
-    msg.body = 'Вам написал ' + request.form['email'] + '\n' + request.form['subject']
+    msg.body = 'Вам написал ' + request.form['lastname'] + ' ' + request.form['firstname'] + ' ' \
+               + request.form['email'] + '\n' + request.form['subject']
     mail.send(msg)
     print(msg)
 
