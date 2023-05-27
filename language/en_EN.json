@@ -1,10 +1,19 @@
 {
-   "education": "Education",
-    "working_experience": "Working Experience",
-    "interests": "Interests",
-    "projects": "Projects",
-    "languages": "Languages",
-    "certificates": "Certificates",
-    "hobbies": "Hobbies",
-    "my_portfolio": "My Portfolio"
+ "education": "Education",
+ "working_experience": "Working Experience",
+ "interests": "Interests",
+ "projects": "Projects",
+ "languages": "Languages",
+ "certificates": "Certificates",
+ "hobbies": "Hobbies",
+ "my_portfolio": "My Portfolio",
+ "my_name": "Гульназ",
+ "button_back": "Back",
+ "education_content_title":"Institute of Philology and Intercultural Communication",
+ "button_contact": "Get in touch",
+ "contact_form": "Contact form",
+ "first_name": "First name",
+ "first_name_placeholder": "Enter your First name...",
+ "letter_hello": "Hello, ",
+ "letter_subject": "Thank you for..."
 }

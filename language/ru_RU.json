@@ -1,11 +1,19 @@
 {
-   "education": "Образование",
-    "working_experience": "Опыт работы",
-    "interests": "Интересы",
-    "projects": "Проекты",
-    "languages": "Языки",
-    "certificates": "Сертификаты",
-    "hobbies": "Хобби",
-    "my_portfolio": "Моё портфолио"
-
+ "education": "Образование",
+ "working_experience": "Опыт работы",
+ "interests": "Интересы",
+ "projects": "Проекты",
+ "languages": "Языки",
+ "certificates": "Сертификаты",
+ "hobbies": "Хобби",
+ "my_portfolio": "Моё портфолио",
+ "my_name": "Гульназ",
+ "button_back": "Назад",
+ "education_content_title":"ИФМК",
+ "button_contact": "Свяжись со мной",
+ "contact_form": "Форма связи",
+ "first_name": "Имя",
+ "first_name_placeholder": "Введите своё имя...",
+ "letter_hello": "Добрый день, ",
+ "letter_subject": "Спасибо за ваше обращение, может быть я вам отвечу"
 }
