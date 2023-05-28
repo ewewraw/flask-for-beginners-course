@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../static/portfolio.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
-<body>
+<title>HTML фон</title>
+</head>
+<body style="color:Purple; background-color:#D8BFD8">
 <header>
     <div class="d-flex w-100 justify-content-around">
         <h1>{{ translations.get('my_portfolio') }}</h1>
@@ -38,28 +40,28 @@
       <h1>{{ translations.get('my_name') }}</h1>
     </div>
     <div class="education categories">
-      <a href="/ecucation_categories">{{ translations.get('education') }}</a>
+      <a href="/education_categories">{{ translations.get('education') }}</a>
     </div>
     <div class="working-experience categories">
-      <a href="">{{ translations.get('working_experience') }}</a>
+      <a href="/workingexperience_categories">{{ translations.get('working_experience') }}</a>
     </div>
     <div class="interests categories">
       <a href="/interests_categories">{{ translations.get('interests') }}</a>
     </div>
-    <div class="projects categories">
-      <a href="">{{ translations.get('projects') }}</a>
+    <div class="pets categories">
+      <a href="/pets">{{ translations.get('pets') }}</a>
     </div>
     <div class="languages categories">
-      <a href="/languages_categoties">{{ translations.get('languages') }}</a>
+      <a href="/languages_categories">{{ translations.get('languages') }}</a>
     </div>
     <div class="certificates categories">
-      <a href="">{{ translations.get('certificates') }}</a>
+      <a href="/certificates">{{ translations.get('certificates') }}</a>
     </div>
     <div class="picture">
       <img src="../static/gulnaz.jpg" alt="Profile Picture">
     </div>
     <div class="hobbies categories">
-      <a href="">{{ translations.get('hobbies') }}</a>
+      <a href="/hobbies">{{ translations.get('hobbies') }}</a>
     </div>
   </div>
 </main>

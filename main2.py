@@ -34,21 +34,33 @@ def main_page():
 def portfolio():
     return render_template('portfolio.html', translations=languages.get(app_language))
 
-@app.route('/ecucation_categories')
+@app.route('/education_categories')
 def education_categories():
     return render_template('education.html', translations=languages.get(app_language))
 
-@app.route('/languages_categoties')
+@app.route('/languages_categories')
 def languages_categories():
     return render_template('languages.html', translations=languages.get(app_language))
 
 @app.route('/workingexperience_categories')
 def workingexperience_categories():
-    return render_template('workingexperience.html', translations=languages.get(app_language))
+    return render_template('working_experience.html', translations=languages.get(app_language))
 
 @app.route('/interests_categories')
-def interest_categories():
+def interests_categories():
     return render_template('interests.html', translations=languages.get(app_language))
+
+@app.route('/hobbies')
+def hobbies_categories():
+    return render_template('hobbies.html', translations=languages.get(app_language))
+
+@app.route('/pets')
+def pets_categories():
+    return render_template('pets.html', translations=languages.get(app_language))
+
+@app.route('/certificates')
+def certificates_categories():
+    return render_template('certificates.html', translations=languages.get(app_language))
 
 @app.route('/contact_form')
 def contact():
@@ -56,7 +68,7 @@ def contact():
 
 @app.route('/send-test-email')
 def index():
-    msg = Message('Hello', sender='08gulnazik08@gmail.com', recipients=['shakirova.gul2015@yandex.ru', os.getenv("FROM_EMAIL")])
+    msg = Message('Hello', sender='gulnazshkrv@gmail.com', recipients=['shakirova.gul2015@yandex.ru', os.getenv("FROM_EMAIL")])
     msg.body = "This is the email body"
     mail.send(msg)
     print(msg)
@@ -65,8 +77,8 @@ def index():
 @app.route('/send-email', methods = ['POST'])
 def send_email():
 
-    msg = Message( languages.get(app_language).get('letter_hello') + request.form['lastname'] + ' ' + request.form['firstname'], sender=os.getenv("FROM_EMAIL"),
-                  recipients=[request.form['email']])
+    msg = Message( languages.get(app_language).get('letter_hello') + request.form['lastname'] + ' ' + request.form['firstname'],
+                   sender=os.getenv("FROM_EMAIL"), recipients=[request.form['email']])
     msg.body = languages.get(app_language).get('letter_subject')
     mail.send(msg)
 
