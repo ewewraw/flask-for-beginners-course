@@ -9,6 +9,16 @@
 <title>HTML фон</title>
 </head>
 <body style="color:Purple; background-color:#D8BFD8">
+<style>
+       .text {
+        background: #FFA500; /* Цвет фона */
+        outline: 2px solid #000; /* Чёрная рамка */
+        border: 3px solid #fff; /* Белая рамка */
+        border-radius: 10px; /* Радиус скругления */
+        width: 40%;
+        margin-right: 5%;
+       }
+  </style>
     <header>
         <div class="d-flex w-100 justify-content-around">
             <form action="/" class="inline">
@@ -34,5 +44,17 @@
             </div>
         </div>
     </header>
+<main>
+        <div class="picture" style="width: 50%; margin-left: 5%;">
+            <img src="../static/hobbies.jpg" alt="Hob Picture" style="border-radius: 10%;">
+        </div>
+        <div class="text">
+            <h2>{{ translations.get('hobbies_content_title') }}</h2>
+            <ul>
+                <li>{{ translations.get('hobbies_content1') }}</li>
+                <li>{{ translations.get('hobbies_content2') }}</li>
+                <li>{{ translations.get('hobbies_content3') }}</li>
+            </ul>
+        </div>
 </body>
 </html>

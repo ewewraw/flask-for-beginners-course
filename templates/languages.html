@@ -52,16 +52,18 @@
         </div>
     </header>
     <main>
+        <div class="picture" style="width: 50%; margin-left: 5%;">
+            <img src="../static/languages.jpg" alt="Uni Picture" style="border-radius: 40%;">
  <div class="text">
-<h2>I can speak the following languages...</h2>
+<h2>{{ translations.get('speak_languages') }}</h2>
      <div class="center">
-         <p> English</p>
+         <p> {{ translations.get('english') }}</p>
      </div>
          <div class="center">
-         <p> Spanish</p>
+         <p> {{ translations.get('spanish') }}</p>
           </div>
      <div class="center">
-         <p> Turkish</p>
+         <p> {{ translations.get('turkish') }}</p>
  </div>
 
  </div>
