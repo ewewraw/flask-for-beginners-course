@@ -6,6 +6,11 @@ from os import listdir
 from os.path import isfile, join
 # to install this package run pip (or pip3) install Flask-Mail
 from flask_mail import Mail, Message
+import locale
+import json
+from os import listdir
+from os.path import isfile, join
+from flask_mail import Mail, Message
 import os
 
 app = Flask(__name__)
@@ -24,21 +29,21 @@ app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
 
-# app_language = 'en_EN'
+app_language = 'ru_RU'
 
 @app.route('/portfolio')
 def main_page():
-    # global app_language
+    #app_language
     # TODO
     # Look at the translations argument. How does it look like?
     # What kind of object is that? What is inside?
     # Maybe you can print it and have a look?
     # TODO: Main task: 1) make everything translatable 2) add another language (any)
-    return render_template('portfolio.html', translations=languages.get('ru_RU'))
+    return render_template('portfolio.html', translations=languages.get(app_language))
 
 @app.route('/dummy_function', methods = ['POST'])
 def dummy_function():
-    # global app_language
+    global app_language
     # TODO
     # what is this weird function?
     lang = request.form['lang']
@@ -46,20 +51,45 @@ def dummy_function():
     print(lang)
     print("button clicked")
     if lang == 'en':
-        return render_template('portfolio.html', translations=languages.get('en_EN'))
+        app_language = 'en_EN'
+        return render_template('portfolio.html', translations=languages.get(app_language))
+    elif lang == 'ru':
+        app_language = 'ru_RU'
+        return render_template('portfolio.html', translations=languages.get(app_language))
     else:
-        return render_template('portfolio.html', translations=languages.get('en_EN'))
+        app_language = 'ch_CH'
+        return render_template('portfolio.html', translations=languages.get(app_language))
+@app.route('/volunteering_activity')
+def volunteering_activity():
+    return render_template('volunteering_activity.html', translations=languages.get(app_language))
+@app.route('/education')
+def education():
+    return render_template('education.html', translations=languages.get(app_language))
 
-@app.route('/random')
-def random_page():
-    return render_template('index.html')
+@app.route('/information')
+def information():
+    return render_template('information.html', translations=languages.get(app_language))
 
-@app.route("/send-test-email")
+@app.route('/working_experience')
+def working_experience():
+    return render_template('working_experience.html', translations=languages.get(app_language))
+
+@app.route('/hobbies')
+def hobbies():
+    return render_template('hobbies.html', translations=languages.get(app_language))
+
+@app.route("/send-test-email", methods = ['POST'])
 def index():
-    msg = Message('Damn it really works!', sender = 'ewewraw@gmail.com', recipients = ['natalia.markoborodova@mailbox.tu-dresden.de'])
-    msg.body = "Hey dude, sending you this email from my Flask app, lmk if it works"
+    firstname = request.form['firstname']
+    lastname = request.form['lastname']
+    message = request.form['message']
+    email = request.form['email']
+    msg = Message('New email from' + ' ' + firstname + ' ' + lastname, sender=request.form['email'], recipients=['0708anastasiya99@gmail.com'])
+    msg.body = request.form['message']
     mail.send(msg)
-    return "Message sent!"
+    msg1 = Message('Dear,' + ' ' + firstname + ' ' + ', ' + 'your message is sent!', sender='0708anastasiya99@gmail.com', recipients=[request.form['email']])
+    mail.send(msg1)
+    return "Your message is sent!"
 
 def get_stats(input):
     return locale.format_string('%d', input)

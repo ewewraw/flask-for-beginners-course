@@ -1,4 +1,24 @@
 {
-  "my_portfolio": "My Portfolio",
-  "education": "Education"
+  "name": "Anastasiya Alekseeva",
+  "my_portfolio": "My potfolio",
+  "information": "Information",
+  "education": "Education",
+  "working_experience": "Working experience",
+  "volunteering_activity": "Volunteering activity",
+  "hobbies": "Hobbies",
+  "inst": "Kazan Federal University, Institute of Physics, Teacher of physics and mathematics, 2017-2023",
+  "year": "23 years old",
+  "city": "Almetyevsk city",
+  "play": "Play volleyball and football",
+  "winter": "Winter is my favorite time of the year",
+  "birthday": "Birthday on August 7",
+  "smth": "Tutoring in mathematics and physics. Teacher at an online school. An employee at a pharmacy. Math teacher at school.",
+  "home": "Trips to the family hotel Home away from home",
+  "nature": "Participation in nature cleaning",
+  "dream": "My dream is to open a shelter for people who need help... but it is only dream",
+  "volleyball": "Volleyball",
+  "football": "Football",
+  "book": "Reading books",
+  "plants": "Growing plants and flowers",
+  "crosswords": "Crosswords"
 }
