@@ -84,7 +84,7 @@ def index():
     lastname = request.form['lastname']
     message = request.form['message']
     email = request.form['email']
-    msg = Message('New email from' + ' ' + firstname + ' ' + lastname, sender=request.form['email'], recipients=['0708anastasiya99@gmail.com'])
+    msg = Message('New email from' + ' ' + firstname + ' ' + lastname, sender='0708anastasiya99@gmail.com', recipients=['0708anastasiya99@gmail.com'])
     msg.body = request.form['message']
     mail.send(msg)
     msg1 = Message('Dear,' + ' ' + firstname + ' ' + ', ' + 'your message is sent!', sender='0708anastasiya99@gmail.com', recipients=[request.form['email']])
