@@ -1,0 +1,95 @@
+body {
+    font-family: Times New Roman;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F5F5DC;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #000000;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF8DC;
+}
+
+footer {
+    background-color: #5F9EA0;
+    color: #3F51B5;
+    text-align: center;
+    padding: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "name name name name"
+    "working-experience picture picture education"
+    "hobbies picture picture dog";
+}
+
+.picture {
+    grid-area: picture;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+.picture img {
+    max-width: 70%;
+    height: auto;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #5F9EA0;
+    padding: 20px;
+    text-align: center;
+}
+
+.categories a {
+    color: #FFF8DC;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.categories a:hover {
+    color: #BDBDBD;
+}
+
+.education {
+    grid-area: education;
+}
+
+.working-experience {
+    grid-area: working-experience;
+}
+
+.dog {
+    grid-area: dog;
+}
+
+.hobbies {
+    grid-area: hobbies;
+}
+
+.name {
+    grid-area: name;
+}

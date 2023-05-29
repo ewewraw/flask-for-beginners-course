@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Education</title>
+<title>{{ translations.get('ed') }}</title>
 </head>
 <body>
-Hi? Does it work?
-</body>
-</html>
+<!-- Раздел "О нас" -->
+<h1>{{ translations.get('my_ed') }}</h1>
+<!-- Блок "Наши программы" -->
+<div>
+<!-- Список программ -->
+<ul>
+<li>{{ translations.get('educ') }}</li>
+<li>{{ translations.get('music') }}</li>
+<li>{{ translations.get('bachelor') }}</li>
+<li>{{ translations.get('master') }}</li>
+</ul>
+</div>

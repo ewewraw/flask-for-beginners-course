@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ translations.get('my_dog') }}</title>
+        <link rel="stylesheet" type="text/css" href="../static/dog.css">
+  </head>
+  <body>
+    <!-- Заголовок страницы -->
+    <center><h1>{{ translations.get('my_dog') }}</h1></center>
+<main>
+    <div class="grid-container">
+        <div class="name categories">
+            <h1>{{ translations.get('info_my_dog') }}</h1>
+        </div>
+        <div class="picture">
+            <img src="../static/varya.JPEG" alt="My doggie">
+        </div>
+    </div>
+</main>
+  </body>
 </html>

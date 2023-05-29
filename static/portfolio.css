@@ -1,37 +1,43 @@
 body {
-    font-family: Arials, sans-serif;
+    font-family: Times New Roman;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #F5F5DC;
+    color: #000000;
     text-align: center;
     padding: 20px;
 }
 
 h1 {
     margin: 0;
-    color: #FD9F9F;
+    color: #000000;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFF8DC;
+}
+
+footer {
+    background-color: #5F9EA0;
+    color: #3F51B5;
+    text-align: center;
+    padding: 50px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 4fr 1fr 1fr 4fr;
-    grid-template-rows: 1fr repeat(2, 1fr) repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
     "name name name name"
     "working-experience picture picture education"
-    "projects picture picture certificates"
-    "scholarships picture picture volunteering"
-    "hobbies hobbies hobbies hobbies";
+    "hobbies picture picture dog";
 }
 
 .picture {
@@ -52,19 +58,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f1f1f1;
+    background-color: #5F9EA0;
     padding: 20px;
     text-align: center;
 }
 
 .categories a {
-    color: #333;
+    color: #FFF8DC;
     text-decoration: none;
     font-weight: bold;
+    font-size: larger;
 }
 
 .categories a:hover {
-    color: #555;
+    color: #BDBDBD;
 }
 
 .education {
@@ -75,20 +82,8 @@ main {
     grid-area: working-experience;
 }
 
-.volunteering {
-    grid-area: volunteering;
-}
-
-.projects {
-    grid-area: projects;
-}
-
-.scholarships {
-    grid-area: scholarships;
-}
-
-.certificates {
-    grid-area: certificates;
+.dog {
+    grid-area: dog;
 }
 
 .hobbies {
@@ -98,6 +93,47 @@ main {
 .name {
     grid-area: name;
 }
-.some-class {
-
+form {
+display: flex;
+flex-direction: column;
+margin: 20px auto;
+padding: 10px;
+border: 1px solid #ccc;
+background-color: #f7f7f7;
 }
+label {
+font-weight: bold;
+display: block;
+margin-bottom: 5px;
+}
+input,
+textarea {
+width: 100%;
+padding: 5px;
+box-sizing: border-box;
+border: none;
+outline: none;
+}
+button {
+margin-top: 15px;
+width: fit-content;
+cursor: pointer;
+color: #fff;
+background-color: #2196f3;
+border: none;
+padding: 8px 16px;
+font-size: 14px;
+line-height: 1.5;
+text-align: center;
+text-decoration: none;
+transition: background-color 0.3s ease-in-out;
+border-radius: 3px;
+overflow: hidden;
+}
+button:hover {
+background: #03A9F4;
+}
+</style>
+</head>
+<body>
+<!
