@@ -52,5 +52,7 @@
  "subject_placeholder": "Write something",
  "letter_hello": "Hello,",
  "letter_subject": "Thank you for...",
- "submit": "Submit"
+ "submit": "Submit",
+ "email_sent": "Email is sent",
+ "failed_email_send": "Failed to send"
 }

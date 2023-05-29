@@ -67,29 +67,30 @@ def certificates_categories():
 def contact():
     return render_template('contact_form.html', translations=languages.get(app_language))
 
-@app.route('/send-test-email')
-def index():
-    msg = Message('Hello', sender='gulnazshkrv@gmail.com', recipients=['shakirova.gul2015@yandex.ru', os.getenv("FROM_EMAIL")])
-    msg.body = "This is the email body"
-    mail.send(msg)
-    print(msg)
-    return "Sent"
-
 @app.route('/send-email', methods = ['POST'])
 def send_email():
+    success = True
+    try:
+        msg = Message( languages.get(app_language).get('letter_hello') + request.form['lastname'] + ' ' + request.form['firstname'],
+                       sender=os.getenv("FROM_EMAIL"), recipients=[request.form['email']])
+        msg.body = languages.get(app_language).get('letter_subject')
+        mail.send(msg)
 
-    msg = Message( languages.get(app_language).get('letter_hello') + request.form['lastname'] + ' ' + request.form['firstname'],
-                   sender=os.getenv("FROM_EMAIL"), recipients=[request.form['email']])
-    msg.body = languages.get(app_language).get('letter_subject')
-    mail.send(msg)
+        msg = Message('Новое сообщение с твоего сайта', sender=os.getenv("FROM_EMAIL"),
+                      recipients=['shakirova.gul2015@yandex.ru'])
+        msg.body = 'Вам написал ' + request.form['lastname'] + ' ' + request.form['firstname'] + ' ' \
+                   + request.form['email'] + '\n' + request.form['subject']
+        mail.send(msg)
+    except:
+        print('Неуспешная попытка отправки писем')
+        success = False
 
-    msg = Message('Новое сообщение с твоего сайта', sender=os.getenv("FROM_EMAIL"),
-                  recipients=['shakirova.gul2015@yandex.ru'])
-    msg.body = 'Вам написал ' + request.form['lastname'] + ' ' + request.form['firstname'] + ' ' \
-               + request.form['email'] + '\n' + request.form['subject']
-    mail.send(msg)
+    if (success):
+        result = languages.get(app_language).get('email_sent')
+    else:
+        result = languages.get(app_language).get('failed_email_send')
 
-    return render_template('portfolio.html', translations=languages.get(app_language))
+    return render_template('portfolio.html', translations=languages.get(app_language), emailSentResult=result)
 
 @app.route('/set_lang', methods = ['POST'])
 def dummy_function():
@@ -107,4 +108,4 @@ def dummy_function():
         return render_template(path+'.html', translations=languages.get(app_language))
 
 if __name__ == '__main__':
-    app.run()  # application will start listening for web request on port 5000
+    app.run(debug=True) # application will start listening for web request on port 5000

@@ -13,6 +13,7 @@
     <div class="d-flex w-100 justify-content-around">
         <h1>{{ translations.get('my_portfolio') }}</h1>
         <div class="d-flex justify-items-center">
+             <div>{{ emailSentResult }}</div>
             <form action="/contact_form" class="inline">
                 <button class="m-1">{{ translations.get('button_contact') }}</button>
             </form>

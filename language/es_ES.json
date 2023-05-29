@@ -52,5 +52,7 @@
   "subject_placeholder": "Escriba algo...",
   "letter_hello": "Buenos días!, ",
  "letter_subject": "Gracias por tu mensaje, les voy a responder muy pronto!",
-  "submit": "Entregar"
+  "submit": "Entregar",
+  "email_sent": "Correo enviado",
+ "failed_email_send": "Envío fallido "
 }
