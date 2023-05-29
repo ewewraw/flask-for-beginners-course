@@ -16,6 +16,19 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
+app_language = 'ru_RU'
+
+main_path = os.getenv("PROJECT_PATH")
+print(os.getenv("PROJECT_PATH"))
+
+locale.setlocale(locale.LC_ALL, app_language)
+languages = {}
+language_list = [f for f in listdir(os.path.join(main_path, 'language')) if
+                 isfile(join(os.path.join(main_path, 'language'), f))]
+for lang in language_list:
+    lang_code = lang.split('.')[0]
+    with open(os.path.join(main_path, 'language', lang), 'r', encoding='utf8') as file:
+        languages[lang_code] = json.loads(file.read())
 
 @app.route('/')
 def main_page():
@@ -98,18 +111,7 @@ def dummy_function():
         app_language = 'es_ES'
         return render_template(path + '.html', translations=languages.get(app_language))
 
+
+
 if __name__ == '__main__':
-    app_language = 'ru_RU'
-
-    main_path = os.getenv("PROJECT_PATH")
-
-    locale.setlocale(locale.LC_ALL, app_language)
-    languages = {}
-    language_list = [f for f in listdir(os.path.join(main_path, 'language')) if
-                     isfile(join(os.path.join(main_path, 'language'), f))]
-    for lang in language_list:
-        lang_code = lang.split('.')[0]
-        with open(os.path.join(main_path, 'language', lang), 'r', encoding='utf8') as file:
-            languages[lang_code] = json.loads(file.read())
-
     app.run(debug=True)
