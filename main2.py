@@ -7,7 +7,7 @@ from flask_mail import Mail, Message
 import os
 app = Flask(__name__)
 
-app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_SERVER']='smtp.mail.ru'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = os.getenv("FROM_EMAIL")
 app.config['MAIL_PASSWORD'] = os.getenv("EMAIL_PASSWORD")
