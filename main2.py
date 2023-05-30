@@ -57,6 +57,10 @@ def education():
 def mypets():
     return render_template('mypets.html')
 
+@app.route("/hobbies")
+def hobbies():
+    return render_template('hobbies.html')
+
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 # TODO: replace with your email

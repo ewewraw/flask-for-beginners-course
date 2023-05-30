@@ -16,8 +16,12 @@ img {
   margin: auto;
 }
 
+header {
+    background-color: #ff6771;
+    padding: 1px;
+}
+
 h1 {
-    margin: 3%;
     color: #2f1728;
     text-align: center;
 }

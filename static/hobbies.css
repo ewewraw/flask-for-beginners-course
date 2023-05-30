@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff5da;
+    font-family: 'DM Serif Display', serif;    margin: 0;
+}
+
+header {
+    background-color: #ff6771;
+    padding: 1px;;
+}
+
+h1 {
+    color: #2f1728;
+    text-align: center;
+    background-color: #ff6771;
+}
+
+h2 {
+    margin: 3%;
+    color: #2f1728;
+    text-align: center;
+}
+
+div.center {
+  text-align: center;
+}
