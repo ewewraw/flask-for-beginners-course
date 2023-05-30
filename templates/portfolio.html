@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../static/portfolio.css">
 </head>
 <body>
 <header>
-    <h1>My Portfolio</h1>
+    <div class="d-flex flex-row w-75 justify-content-around">
+        <h1>{{ translations.get('My_portfolio') }}</h1>
+        <div class="d-flex flex-row justify-items-center">
+            <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="en" />
+                <button class="m-1">EN</button>
+            </form>
+            <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="de" />
+                <button class="m-1">DE</button>
+            </form>
+            <form action="/dummy_function" method="post">
+                <input type="hidden" name="lang" value="ru" />
+                <button class="m-1">RU</button>
+            </form>
+        </div>
 </header>
 <main>
     <div class="grid-container">
@@ -14,28 +32,31 @@
             <h1>Alex Vakhrusheva</h1>
         </div>
         <div class="education categories">
-            <a href="{{url_for("education")}}">Education</a>
+            <a href="{{url_for("education")}}">{{ translations.get('Education') }}</a>
         </div>
         <div class="working-experience categories">
-            <a href="#">Work Experience</a>
+            <a href="#">{{ translations.get('Work_experience') }}</a>
         </div>
         <div class="volunteering categories">
-            <a href="#">Volunteering</a>
+            <a href="{{url_for("mypets")}}">{{ translations.get('My_pets') }}</a>
         </div>
         <div class="picture">
             <img src="../static/Sasha.jpg" alt="Profile Picture">
         </div>
         <div class="hobbies categories">
-            <a href="#">My hobbies</a>
+            <a href="#">{{ translations.get('Hobbies') }}</a>
         </div>
     </div>
 </main>
 <footer>
-    <form action="/data" method="post">
-    <input type="text" placeholder="Ваше имя"></input>
-    <input type="text" placeholder="Ваш email"></input>
-    <input type="submit" value="Сохранить">
-    </form>
+    <div class="form">
+    <form action="/send-test-email" method="post">
+                <input type="text" id="name" name="name" placeholder="Ваше имя"></input>
+                <input type="text" id="email" name="email" placeholder="Ваш email"></input>
+                <input type="text" id="message" name="message" placeholder="Ваше сообщение"></input>
+                <input type="submit" value="Сохранить">
+    </div>
+        <a href="https://github.com/AlexVakhrusheva">Github</a>
 </footer>
 </body>
 </html>
