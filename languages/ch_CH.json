@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>ch_CH.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ch_CH.json</font>
+</center></td></tr></table>
+<pre><span class="s0">{</span>
+  <span class="s1">&quot;name&quot;</span><span class="s2">: </span><span class="s1">&quot;Ираида Чувашка&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;my_portfolio&quot;</span><span class="s2">: </span><span class="s1">&quot;Манӑн портфолио&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;information&quot;</span><span class="s2">: </span><span class="s1">&quot;Хыпар&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;education&quot;</span><span class="s2">: </span><span class="s1">&quot;Вӗренӳ&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;working_experience&quot;</span><span class="s2">: </span><span class="s1">&quot;Ӗҫ опычӗ&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;volunteering_activity&quot;</span><span class="s2">: </span><span class="s1">&quot;Волонтер ӗҫӗ-хӗлӗ&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;hobbies&quot;</span><span class="s2">: </span><span class="s1">&quot;Хобби&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;inst&quot;</span><span class="s2">: </span><span class="s1">&quot;Хусанти федераци университечӗ, физикӑпа математика учителӗ, 2017-2023&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;year&quot;</span><span class="s2">: </span><span class="s1">&quot;23 ҫул&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;city&quot;</span><span class="s2">: </span><span class="s1">&quot;Хула Альметьевск&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;play&quot;</span><span class="s2">: </span><span class="s1">&quot;Волейболла тата футболла вылятӑп&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;winter&quot;</span><span class="s2">: </span><span class="s1">&quot;Хӗл-ҫулталӑкӑн юратнӑ вӑхӑчӗ&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;birthday&quot;</span><span class="s2">: </span><span class="s1">&quot;Августӑн 7-мӗшӗнче ҫуралнӑ кун&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;smth&quot;</span><span class="s2">: </span><span class="s1">&quot;Физикӑпа математика репетиторстви. Онлайн-шкулта Учитель. Аптекӑра ӗҫлекен. Математика учителӗ шкулта.&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;home&quot;</span><span class="s2">: </span><span class="s1">&quot;Ҫемье гостиницине кайни&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;nature&quot;</span><span class="s2">: </span><span class="s1">&quot;Субботниксене хутшӑнни&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;dream&quot;</span><span class="s2">: </span><span class="s1">&quot;Манӑн ӗмӗт-пулӑшу кирлӗ ҫынсем валли хӳтлӗх тупасси... анчах ку ӗмӗт ҫеҫ&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;volleyball&quot;</span><span class="s2">: </span><span class="s1">&quot;Волейбол&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;football&quot;</span><span class="s2">: </span><span class="s1">&quot;Футбол&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;book&quot;</span><span class="s2">: </span><span class="s1">&quot;Кӗнеке вулани&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;plants&quot;</span><span class="s2">: </span><span class="s1">&quot;Ӳсентӑрансемпе чечек ҫитӗнтерни&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;crosswords&quot;</span><span class="s2">: </span><span class="s1">&quot;Кроссвордсем&quot;</span>
+<span class="s0">}</span></pre>
+</body>
+</html>

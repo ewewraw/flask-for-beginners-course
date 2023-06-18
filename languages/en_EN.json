@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>en_EN.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+en_EN.json</font>
+</center></td></tr></table>
+<pre><span class="s0">{</span>
+  <span class="s1">&quot;name&quot;</span><span class="s2">: </span><span class="s1">&quot;Iraida Ivanova&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;my_portfolio&quot;</span><span class="s2">: </span><span class="s1">&quot;My portfolio&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;biography&quot;</span><span class="s2">: </span><span class="s1">&quot;About me&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;education&quot;</span><span class="s2">: </span><span class="s1">&quot;Education&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;working_experience&quot;</span><span class="s2">: </span><span class="s1">&quot;Working experience&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;full_name&quot;</span><span class="s2">: </span><span class="s1">&quot;Ivanova Iraida Urevna&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;examples_of_works&quot;</span><span class="s2">: </span><span class="s1">&quot;Examples of works&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;hobbies&quot;</span><span class="s2">: </span><span class="s1">&quot;Hobbies&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;inst&quot;</span><span class="s2">: </span><span class="s1">&quot;I.N. Ulyanov Chuvash State University, 2018-2022. Specialty: Philology.&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;city&quot;</span><span class="s2">: </span><span class="s1">&quot;City: Cheboksary, Kazan&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;life_position&quot;</span><span class="s2">: </span><span class="s1">&quot;Life position: Be yourself and live as you want&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;birthday&quot;</span><span class="s2">: </span><span class="s1">&quot;Born in 18.07.2000 (23 y.o.)&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;edu_2&quot;</span><span class="s2">: </span><span class="s1">&quot;Education: completed higher education&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;spring&quot;</span><span class="s2">: </span><span class="s1">&quot;Spring is my favorite time of the year&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;smth&quot;</span><span class="s2">: </span><span class="s1">&quot;Teacher and tutor of Russian language and literature in school No 1&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;home&quot;</span><span class="s2">: </span><span class="s1">&quot;Spend time with family and be alone with nature&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;dream&quot;</span><span class="s2">: </span><span class="s1">&quot;My dream is to open a shelter for people who need help... but it is only dream&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;draw&quot;</span><span class="s2">: </span><span class="s1">&quot;Painting on canvases&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;sing&quot;</span><span class="s2">: </span><span class="s1">&quot;Travelling&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;book&quot;</span><span class="s2">: </span><span class="s1">&quot;Reading books&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;beads&quot;</span><span class="s2">: </span><span class="s1">&quot;I make jewelry from beads&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;photo&quot;</span><span class="s2">: </span><span class="s1">&quot;Making photo and video&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;text&quot;</span><span class="s2">: </span><span class="s1">&quot;Write texts and post&quot;</span><span class="s2">,</span>
+  <span class="s1">&quot;telephone&quot;</span><span class="s2">: </span><span class="s1">&quot;Telephone: +79003332967&quot;</span>
+<span class="s0">}</span></pre>
+</body>
+</html>
