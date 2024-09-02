@@ -1,3 +1,4 @@
 There exists a being whose name is one, yet as dual as their heritage and their home. This being was both your rival and your ally. Are home numbers? Ask the being...
 
-The map you'll find around, but hidden!
+The being will help you to find the way!
+https://map-to-{being's}-{home}.glitch.me
